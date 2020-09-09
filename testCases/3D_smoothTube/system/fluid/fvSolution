@@ -1,0 +1,106 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  6                                     |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+version     2.0;
+format      ascii;
+class       dictionary;
+object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+  "T.*"
+  {
+    solver          smoothSolver;
+    smoother        symGaussSeidel;
+    tolerance       1e-11;
+    relTol          0;
+    maxIter	    100;
+  };
+
+  "alpha.kondensate.*"
+  {
+    cAlpha          1;
+    nAlphaCorr      1;
+    nAlphaSubCycles 1;
+
+    MULESCorr       yes;
+    nLimiterIter    10;
+
+    solver          smoothSolver;
+    smoother        symGaussSeidel;
+    tolerance       1e-10;
+    relTol          0;
+    maxIter         500;
+  };
+
+  "U.*"
+  {
+    solver          smoothSolver;
+    smoother        symGaussSeidel;
+    tolerance       1e-8;
+    relTol          0;
+  };
+
+  pcorr
+  {
+    $p_rgh;
+    tolerance 1e-10;
+    relTol          0;
+  };
+
+  "p_rgh.*"
+  {
+        solver          PCG;
+        preconditioner
+        {
+            preconditioner  GAMG;
+
+            tolerance       1e-10;
+            relTol          0;
+
+            nVcycles        2;
+
+            smoother        DICGaussSeidel;
+            nPreSweeps      0;
+            nPostSweeps     2;
+            nFinestSweeps   2;
+
+            cacheAgglomeration true;
+            nCellsInCoarsestLevel 10;
+            agglomerator    faceAreaPair;
+            mergeLevels     1;
+        };
+        tolerance       1e-10;
+        relTol          0;
+        maxIter         100;
+  };
+}
+
+PIMPLE
+{
+    nFlowIter    1;
+    dV		0;
+    QResidual		5e-6;
+    Qrelax                              0.8;
+    Qcycles                             150;
+    momentumPredictor           no;
+    nOuterCorrectors            1;
+    nCorrectors                 2;
+    nNonOrthogonalCorrectors    0;
+    pRefCell                    0;
+    pRefValue                   1e5;
+}
+
+relaxationFactors
+{
+}
+
+// ************************************************************************* //

@@ -1,0 +1,78 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.1                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       polyBoundaryMesh;
+    location    "constant/fluid/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+6
+(
+    atmosphere
+    {
+        type            patch;
+        nFaces          10374;
+        startFace       893051;
+    }
+    symmetry1
+    {
+        type            symmetryPlane;
+        inGroups        1(symmetryPlane);
+        nFaces          1995;
+        startFace       903425;
+    }
+    symmetry2
+    {
+        type            symmetryPlane;
+        inGroups        1(symmetryPlane);
+        nFaces          5301;
+        startFace       905420;
+    }
+    front
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          5326;
+        startFace       910721;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  back;
+    }
+    back
+    {
+        type            cyclic;
+        inGroups        1(cyclic);
+        nFaces          5326;
+        startFace       916047;
+        matchTolerance  0.0001;
+        transform       unknown;
+        neighbourPatch  front;
+    }
+    fluid_to_tube
+    {
+        type            mappedWall;
+        inGroups        
+2
+(
+wall
+mappedPatch
+)
+;
+        nFaces          7068;
+        startFace       921373;
+        sampleMode      nearestPatchFace;
+        sampleRegion    tube;
+        samplePatch     tube_to_fluid;
+    }
+)
+
+// ************************************************************************* //

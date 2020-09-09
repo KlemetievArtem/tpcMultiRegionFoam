@@ -1,0 +1,62 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  6
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    class       volVectorField;
+    location    "0/fluid";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 1 -1 0 0 0 0 ];
+
+internalField   uniform ( 0 0 0 );
+
+boundaryField
+{
+    atmosphere
+    {
+        type            pressureInletOutletVelocity;
+        value           uniform ( 0 0 0 );
+    }
+    outlet
+    {
+        type            pressureInletOutletVelocity;
+        value           uniform ( 0 0 0 );
+    }
+    symmetry1
+    {
+        type            symmetryPlane;
+    }
+    symmetry2
+    {
+        type            symmetryPlane;
+    }
+    front
+    {
+        type            cyclic;
+    }
+    back
+    {
+        type            cyclic;
+    }
+    fluid_to_tube
+    {
+        type            fixedValue;
+        value           uniform ( 0 0 0 );
+    }
+    defaultFaces
+    {
+        type            empty;
+    }
+}
+
+
+// ************************************************************************* //
