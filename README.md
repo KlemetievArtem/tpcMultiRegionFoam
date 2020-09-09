@@ -1,5 +1,5 @@
 # tpcMultiRegionFoam &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; ![alt text](http://www.tum.de/typo3conf/ext/in2template/Resources/Public/Images/tum-logo.png)
-CFD Solver for heat transfer simulations between solid and fluid regions with an implemented model for thermal phase change of pure substances in fluid regions.
+CFD Solver for heat transfer simulations between solid and fluid regions with an implemented model for thermal phase change of pure substances in fluid regions. Algorithm is tested and validated for thin film applications with laminar flow.
 
 [Technical University of Munich](http://www.tum.de/en/), [Institute of Plant and Process Technology](https://www.apt.mw.tum.de/startseite/)
 
