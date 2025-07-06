@@ -7,7 +7,8 @@ CFD Solver for heat transfer simulations between solid and fluid regions with an
         © 2019 Thomas Kleiner, Sebatian Rehfeldt, Harald Klein
 
 ## Description
-tpcMultiRegionFoam is a developed CFD solver, using the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6), for transient heat transfer simulations between thermally coupled solid and fluid regions with pure substance condensation/evaporation. The solver builds a combination of the chtMultiRegionFoam and the interFoam solver developed by [OpenCFD Ltd.](http://openfoam.com/) and is extended by a phase change model for pure substances. The model validation and mathematical formulation are given in [Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055).
+(IN PROCESS) Curent OpenFOAM solver is modification of CFD solver tpcMultiRegionFoam (https://github.com/ThomasKleiner/tpcMultiRegionFoam), first presented and validated in the article [Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055).
+tpcMultiRegionFoam is a developed CFD solver, using the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6), for transient heat transfer simulations between thermally coupled solid and fluid regions with pure substance condensation/evaporation. The solver builds a combination of the chtMultiRegionFoam and the interFoam solver developed by [OpenCFD Ltd.](http://openfoam.com/) and is extended by a phase change model for pure substances. The model validation and mathematical formulation are given in .
 
 If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article ([Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055)) should be cited.
 
