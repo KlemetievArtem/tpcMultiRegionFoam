@@ -20,7 +20,7 @@ For turbulence calculation modfel from [Da Riva,2009](https://asmedigitalcollect
 
 tpcMultiRegionFoam is a developed CFD solver, using the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6). The solver builds a combination of the chtMultiRegionFoam and the interFoam solver developed by [OpenCFD Ltd.](http://openfoam.com/) and is extended by a phase change model for pure substances. The model validation and mathematical formulation are given in .
 
-If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article ([Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055)) should be cited.
+If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article [Minko, Artemov, Klementiev 2022](https://link.springer.com/article/10.1134/S0040601523030059) should be cited.
 
 ## Installation
 For installation, the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6) have to be loaded. 
@@ -53,6 +53,10 @@ The presented results of the 2D simulation shows the tube’s temperature field 
 In the beginning of the simulation, the tube temperature decreases and an initial condensate film is formed. Afterwards a drop is formed at the bottom of the tube, which eventually drips off. The simulation reaches a state, where condensate drips off periodically. The increase in thermal resistance due to the condensate film can be observed at the lower part of the tube, where the changes in the temperature field stand in accordance with the drip-off frequency.
 
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ![](gif/2DSimulation_25fps_600dpi.gif)
+
+
+https://github.com/user-attachments/assets/f55ce8f3-b19b-441b-ab63-6ffcd1e31766
+
 
 
 ### 3D-Simulation of pure substance film condensation on a horizontal smooth tube
