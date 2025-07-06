@@ -30,6 +30,7 @@ Description
 #ifndef compressibleCourantNo_H
 #define compressibleCourantNo_H
 
+#include "volFields.H"
 #include "fvMesh.H"
 
 namespace Foam
