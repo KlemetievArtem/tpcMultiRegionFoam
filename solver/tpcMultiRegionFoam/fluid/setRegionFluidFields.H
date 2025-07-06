@@ -63,3 +63,5 @@ const int Qcycles = QcyclesFluid[i];
 const scalar Qrelax = QrelaxFluid[i];
 const int dV = dVFluid[i];
 const scalar QResidual = QResidualFluid[i];
+
+volScalarField& minCellLength = minCellLengthFluid[i];
