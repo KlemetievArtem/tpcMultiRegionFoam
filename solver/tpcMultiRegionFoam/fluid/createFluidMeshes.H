@@ -21,4 +21,40 @@
                 )
             )
         );
+    	minCellLengthFluid.set
+    	(
+    		i,
+    		new volScalarField
+            (
+                IOobject
+                (
+                    "minCellLengthFluid",
+                        runTime.timeName(),
+                        fluidRegions[i],
+                        IOobject::NO_READ, //IOobject::NO_READ,IOobject::READ_IF_PRESENT,IOobject::MUST_READ_IF_MODIFIED, 
+                        IOobject::AUTO_WRITE //IOobject::NO_WRITE
+                    ),
+    				fluidRegions[i],
+    				dimensionedScalar("dummy", dimensionSet(0,1,0,0,0,0,0), SMALL)
+                )
+            );
+        // Calculating characteristic Control Volume length
+        const cellList& cells = fluidRegions[i].cells();
+    	const pointField& ctrs = fluidRegions[i].C();
+    	forAll(cells, cellI)
+    	{
+    		scalar minLength = GREAT;
+    		const labelList neighbours = fluidRegions[i].cellCells()[cellI];		
+    		const point& main_p = ctrs[cellI];		
+    		forAll(neighbours, nbI)
+    		{
+    			const point& nb_p = ctrs[neighbours[nbI]];
+    			scalar length = powf((pow(main_p.component(vector::X)-nb_p.component(vector::X),2)+pow(main_p.component(vector::Y)-nb_p.component(vector::Y),2)+pow(main_p.component(vector::Z)-nb_p.component(vector::Z),2)),0.5);
+    			if (length < minLength)
+    			{  
+    				minLength = length;
+    			}			
+    		}
+    		minCellLengthFluid[i][cellI] = minLength;
+    	}
     }
