@@ -55,18 +55,15 @@ In the beginning of the simulation, the tube temperature decreases and an initia
 ![droplet_new](https://github.com/user-attachments/assets/d43b097b-2e4e-4778-8966-558e311556b7)
 
 
+### 2D-Simulation of moving pure substance film condensation on a horizontal smooth tube
 
 https://github.com/user-attachments/assets/f55ce8f3-b19b-441b-ab63-6ffcd1e31766
 
+
+### 2D-Simulation of pure substance film condensation on a horizontal smooth tubes bundle
+
 ![Briggs_Uv04_U_OF](https://github.com/user-attachments/assets/c6071347-3797-4b13-b11a-0f26d2e75bd6)
 
-
-### 3D-Simulation of pure substance film condensation on a horizontal smooth tube
-The presented results of the 3D simulation shows the tube’s temperature on the left side and the interface of the condensate on the right side.  The actual simulation domain is given in the darker blue shade. The simulation results are expanded by an additional domain to each side for a better visual representation of the results. Additionally a thin initial film is provided in the simulation to reduce computational effort.
-
-The setup of the 3D simulation is the same as for the 2D simulation except, that the simulation domain in axial direction is expanded and cyclic boundary conditions are used for the boundaries normal to said direction. The length of the simulation domain is equal to the most dangerous wavelength of the thin film Taylor instability of *n*-pentane. 
-
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ![](gif/3DSimulation_25fps_600dpi.gif)
 
 ## Reference
 * T. Kleiner, S. Rehfeldt, H. Klein, CFD model and simulation of pure substance condensation on horizontal tubes using the volume of fluid method, Int. J. Heat Mass Transf. 138 (2019) 420-431, [https://doi.org/10.1016/j.ijheatmasstransfer.2019.04.054](https://doi.org/10.1016/j.ijheatmasstransfer.2019.04.054).
