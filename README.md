@@ -3,7 +3,7 @@
 CFD Solver for heat transfer simulations between solid and fluid regions with implemented models for thermal phase change of pure substances in fluid regions (Lee model - LC; Kleiner, Rehfeldt, Klein model - KRK; Lee model with AUTOMATIC constant calculation (Minko model) - LCA) and turbulence model in vapor phase. 
 Algorithm is tested and validated for moving vapor condensation.
 
-[Technical University of Munich](http://www.tum.de/en/), [Institute of Plant and Process Technology](https://www.apt.mw.tum.de/startseite/)
+[National Research University "Moscow Power Engineering Institute"](https://mpei.ru/lang/en/Pages/default.aspx), [Dept. of Engineering Thermophysics named after Vladimir Kirillin​](https://thermophys.ru/)
 
 
         © 2019 Thomas Kleiner, Sebatian Rehfeldt, Harald Klein
