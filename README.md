@@ -18,6 +18,9 @@ CFD solver was further modified with adding of different condnsation models (mod
 
 Linearization of (condensation) source term in energy conservation equation is performed.
 For turbulence calculation modfel from [Da Riva,2009](https://asmedigitalcollection.asme.org/MNHT/proceedings/MNHMT2009/43901/139/334977) for dampenning turbulence in condensate phase.
+
+Cross-verification of LCA condenstion model perfermed in [Minko, Artemov, Klementiev 2025]().
+
 If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article [Minko, Artemov, Klementiev 2022](https://link.springer.com/article/10.1134/S0040601523030059) should be cited.
 
 ## Installation
