@@ -52,11 +52,13 @@ The presented results of the 2D simulation shows the tube’s temperature field 
 
 In the beginning of the simulation, the tube temperature decreases and an initial condensate film is formed. Afterwards a drop is formed at the bottom of the tube, which eventually drips off. The simulation reaches a state, where condensate drips off periodically. The increase in thermal resistance due to the condensate film can be observed at the lower part of the tube, where the changes in the temperature field stand in accordance with the drip-off frequency.
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; ![](gif/2DSimulation_25fps_600dpi.gif)
+![droplet_new](https://github.com/user-attachments/assets/d43b097b-2e4e-4778-8966-558e311556b7)
+
 
 
 https://github.com/user-attachments/assets/f55ce8f3-b19b-441b-ab63-6ffcd1e31766
 
+![Briggs_Uv04_U_OF](https://github.com/user-attachments/assets/c6071347-3797-4b13-b11a-0f26d2e75bd6)
 
 
 ### 3D-Simulation of pure substance film condensation on a horizontal smooth tube
