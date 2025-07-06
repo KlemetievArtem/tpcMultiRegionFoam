@@ -34,12 +34,14 @@ Foam::scalar Foam::compressibleCourantNo
     const surfaceScalarField& phi
 )
 {
-    scalarField sumPhi
-    (
-        fvc::surfaceSum(mag(phi))().internalField()
-      / rho.internalField()
-    );
+    tmp<volScalarField> CoField(new volScalarField(IOobject("CoField",mesh.time().timeName(),mesh,IOobject::NO_READ,IOobject::AUTO_WRITE),
+        mesh,
+        dimensionedScalar("0", dimless, 0.0),
+        zeroGradientFvPatchScalarField::typeName)
+        );
 
+    scalarField sumPhi(fvc::surfaceSum(mag(phi))().primitiveField());
+    CoField->ref() = (0.5*mesh.time().deltaT())*fvc::surfaceSum(mag(phi))()()/mesh.V();
     scalar CoNum = 0.5*gMax(sumPhi/mesh.V().field())*runTime.deltaTValue();
 
     scalar meanCoNum =
@@ -48,6 +50,9 @@ Foam::scalar Foam::compressibleCourantNo
     Info<< "Region: " << mesh.name() << " Courant Number mean: " << meanCoNum
         << " max: " << CoNum << endl;
 
+    if(mesh.time().outputTime()){
+         CoField->write();
+    }
     return CoNum;
 }
 
