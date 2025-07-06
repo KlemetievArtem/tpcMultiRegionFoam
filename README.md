@@ -12,9 +12,9 @@ Algorithm is tested and validated for moving vapor condensation.
 ## Description
 Curent OpenFOAM solver is modification of CFD solver [tpcMultiRegionFoam](https://github.com/ThomasKleiner/tpcMultiRegionFoam), first presented and validated in the article [Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055).
 CFD solver was further modified with adding of different condnsation models (models for thermal phase change of pure substances):
-1. LC: first published in [Lee 1980]([add](https://www.scopus.com/pages/publications/84876465720))
-2. KRK: first published in [Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055)
-3. LCA: first published in [Minko, Artemov, Klementiev 2022]([add](https://link.springer.com/article/10.1134/S0040601523030059))
+1. LC: first published in [Lee 1980](https://www.scopus.com/pages/publications/84876465720);
+2. KRK: first published in [Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055);
+3. LCA: first published in [Minko, Artemov, Klementiev 2022](https://link.springer.com/article/10.1134/S0040601523030059).
 For turbulence calculation modfel from [Da Riva,2009](https://asmedigitalcollection.asme.org/MNHT/proceedings/MNHMT2009/43901/139/334977) for dampenning turbulence in condensate phase.
 
 tpcMultiRegionFoam is a developed CFD solver, using the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6). The solver builds a combination of the chtMultiRegionFoam and the interFoam solver developed by [OpenCFD Ltd.](http://openfoam.com/) and is extended by a phase change model for pure substances. The model validation and mathematical formulation are given in .
