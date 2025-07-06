@@ -18,12 +18,11 @@ CFD solver was further modified with adding of different condnsation models (mod
 
 Linearization of (condensation) source term in energy conservation equation is performed.
 For turbulence calculation modfel from [Da Riva,2009](https://asmedigitalcollection.asme.org/MNHT/proceedings/MNHMT2009/43901/139/334977) for dampenning turbulence in condensate phase.
-
-tpcMultiRegionFoam is a developed CFD solver, using the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6). The solver builds a combination of the chtMultiRegionFoam and the interFoam solver developed by [OpenCFD Ltd.](http://openfoam.com/) and is extended by a phase change model for pure substances. The model validation and mathematical formulation are given in .
-
 If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article [Minko, Artemov, Klementiev 2022](https://link.springer.com/article/10.1134/S0040601523030059) should be cited.
 
 ## Installation
+
+🟡
 For installation, the [OpenFOAM 6 libraries](https://github.com/OpenFOAM/OpenFOAM-6) have to be loaded. 
 
 All necessary applications for the solver installation can be installed and uninstalled by the supplied [Allwmake](https://github.com/ThomasKleiner/tpcMultiRegionFoam/tree/master/solver/Allwmake) and [Allwclean](https://github.com/ThomasKleiner/tpcMultiRegionFoam/tree/master/solver/Allwclean) shell scripts, respectively. The scripts are located in the [solver](https://github.com/ThomasKleiner/tpcMultiRegionFoam/tree/master/solver) folder.
@@ -37,18 +36,17 @@ $ cd solver
 $ chmod 700 Allw*
 $ ./Allwmake
 ```
-
+🟡
 
 ## Provided Test Cases
 
-[color:yellow](eddddd)
-
+🟡
 Two test cases, a 2D and a 3D test case, are provided for a transient simulation of pure substance condensation on a horizontal tube. 
 Two regions are considered in both simulations. One solid region for the tube and one fluid region for the two phase system. Both Regions are thermally coupled at the outer tube wall. A constant heat flux is withdrawn from the inner wall of the Tube. The initial state of the simulation consists of a pure vapor phase at saturation conditions with a temperature of 309.15 K (*n*-pentane, 1.013 bar). The initial tube temperature is also set to 309.15 K.
 
 In the first couple of time steps, the tube is cooling down and no condensate is formed until the temperature change reaches the outer tube wall. Condensate is formed, as soon as a temperature decrease below saturation conditions would occur in the fluid region.  
 Since a very thin condensate film is formed within the simulations, high computational effort is necessary for a very good quantitative agreement with measurements. Since we aim to give an insight in the simulation set up with the provided test cases, they have a lower mesh resolution and a higher time step size compared to the simulations published in  ([Kleiner 2019](https://www.sciencedirect.com/science/article/pii/S0017931018353055)). 
-
+🟡
 
 ### 2D-Simulation of pure substance film condensation on a horizontal smooth tube
 The presented results of the 2D simulation shows the tube’s temperature field in the rainbow scale and the fluid’s volume phase fraction field in the grey scale. 
