@@ -72,3 +72,7 @@ https://github.com/user-attachments/assets/f55ce8f3-b19b-441b-ab63-6ffcd1e31766
 
 ## Reference
 * T. Kleiner, S. Rehfeldt, H. Klein, CFD model and simulation of pure substance condensation on horizontal tubes using the volume of fluid method, Int. J. Heat Mass Transf. 138 (2019) 420-431, [https://doi.org/10.1016/j.ijheatmasstransfer.2019.04.054](https://doi.org/10.1016/j.ijheatmasstransfer.2019.04.054).
+* Lee Wen, A pressure iteration scheme for two-phase flow modeling, Multiphase Transport: Fundamentals, Reactor Safety, Applications, 1980, pp. 407–431
+* K.B. Minko, V. I. Artemov, A.A. Klementiev, Simulation of Condensation of Stagnant or Moving Saturated Vapor on a Horizontal Tube Using the Volume-of-Fluid (VOF) Method, Thermal Engineering 2023, 70(3), 175-193, [https://link.springer.com/article/10.1134/S0040601523030059](https://link.springer.com/article/10.1134/S0040601523030059).
+* Da Riva, Del Col, Numerical Simulation of Condensation in a Minichannel, Proceedings of the ASME 2009 Second International Conference on Micro/Nanoscale Heat and Mass Transfer. ASME 2009 Second International Conference on Micro/Nanoscale Heat and Mass Transfer, Volume 2. Shanghai, China. December 18–21, 2009. pp. 139-145. ASME, [https://asmedigitalcollection.asme.org/MNHT/proceedings-abstract/MNHMT2009/43901/139/334977](https://asmedigitalcollection.asme.org/MNHT/proceedings-abstract/MNHMT2009/43901/139/334977).
+* K.B. Minko, V. I. Artemov, A.A. Klementiev, _, Thermal Engineering 2025, _, _, [_](_).
