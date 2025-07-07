@@ -23,6 +23,8 @@ Cross-verification of LCA condenstion model perfermed in [Minko, Artemov, Klemen
 
 If simulations with this solver or ideas deducted from this repository lead to a further publication, the before mentioned article [Minko, Artemov, Klementiev 2022](https://link.springer.com/article/10.1134/S0040601523030059) should be cited.
 
+Further refinement of the solver is welcome!
+
 ## Installation
 
 🟡
