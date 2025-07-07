@@ -28,10 +28,14 @@ PtrList<volScalarField> ghFluid(fluidRegions.size());
 PtrList<surfaceScalarField> ghfFluid(fluidRegions.size());
 PtrList<fv::options> fluidFvOptions(fluidRegions.size());
 PtrList<pimpleControl> pimpleFluid(fluidRegions.size());
+List<int> QIterationFlagFluid(fluidRegions.size());
 List<int> QcyclesFluid(fluidRegions.size());
 List<scalar> QrelaxFluid(fluidRegions.size());
 List<int> dVFluid(fluidRegions.size());
 List<scalar> QResidualFluid(fluidRegions.size());
+
+List<int> SourceTypeFluid(fluidRegions.size());
+List<scalar> SourceConstantFluid(fluidRegions.size());
 
 
 
@@ -398,8 +402,11 @@ forAll(fluidRegions, i)
   );
 
   const dictionary& pimpleDict = fluidRegions[i].solutionDict().subDict("PIMPLE");
+  pimpleDict.readIfPresent("QIterationFlag", QIterationFlagFluid[i]);
   pimpleDict.readIfPresent("Qcycles", QcyclesFluid[i]);
   pimpleDict.readIfPresent("Qrelax", QrelaxFluid[i]);
   pimpleDict.readIfPresent("dV", dVFluid[i],1);
   pimpleDict.readIfPresent("QResidual", QResidualFluid[i]);
+  pimpleDict.readIfPresent("SourceType", SourceTypeFluid[i]);
+  pimpleDict.readIfPresent("SourceConstant", SourceConstantFluid[i]);
 }
