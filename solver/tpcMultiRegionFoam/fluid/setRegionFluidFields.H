@@ -59,9 +59,12 @@ if(p_rgh.needReference())
   p_rgh = p - rho * gh;
 }
 
+const int QIterationFlag = QIterationFlagFluid[i];
 const int Qcycles = QcyclesFluid[i];
 const scalar Qrelax = QrelaxFluid[i];
 const int dV = dVFluid[i];
 const scalar QResidual = QResidualFluid[i];
+const int SourceType = SourceTypeFluid[i];
+const dimensionedScalar SourceConstant("SourceConstant", dimensionSet(0, 0, -1, 0, 0, 0, 0), SourceConstantFluid[i]);
 
 volScalarField& minCellLength = minCellLengthFluid[i];
